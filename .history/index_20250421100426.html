@@ -259,11 +259,11 @@
               <div class="authors" style="margin: 2rem 0;">
                 <div style="margin-bottom: 1.5rem;">
                   <a href="https://scholar.google.com/citations?hl=zh-CN&user=9etrpbYAAAAJ&view_op=list_works&sortby=pubdate" class="author-link" style="color: black; font-size: 1.4rem; font-weight: bold; text-decoration: none; transition: color 0.3s;">
-                    Tiancheng Gu<sup>1*</sup>
+                    Tiancheng Gu<sup>1</sup>*
                   </a>
                   <span style="margin: 0 0.5rem; color: white;">•</span>
                   <a href="https://kaicheng-yang0828.github.io/" class="author-link" style="color: black; font-size: 1.4rem; font-weight: bold; text-decoration: none; transition: color 0.3s;">
-                    Kaicheng Yang<sup>2*</sup>
+                    Kaicheng Yang<sup>2</sup>*
                   </a>
                   <span style="margin: 0 0.5rem; color: white;">•</span>
                   <a href="" class="author-link" style="color: black; font-size: 1.4rem; font-weight: bold; text-decoration: none; transition: color 0.3s;">
@@ -293,7 +293,7 @@
                   </a>
                   <span style="margin: 0 0.5rem; color: white;">•</span>
                   <a href="https://scholar.google.com/citations?user=Z_UoQFsAAAAJ&hl=zh-CN" class="author-link" style="color: black; font-size: 1.4rem; font-weight: bold; text-decoration: none; transition: color 0.3s;">
-                    Jiankang Deng<sup>4†</sup>
+                    Jiankang Deng<sup>4</sup>
                   </a>
                 </div>
               
@@ -307,7 +307,7 @@
               </div>
 
               <div style="color: black; font-size: 1.2rem; font-weight: bold; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-                <div>* Equal contribution † Corresponding author</div>
+                <div>* equal contributions</div>
               </div>
 
               <div class="buttons" style="margin-top: 3rem; display: flex; justify-content: center; gap: 1rem;">
@@ -436,7 +436,7 @@
 
                 <div class="box" style="background-color: #f8f9fa; padding: 1.75em; margin-top: 2em; border-left: 5px solid #3273dc; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
                   <p style="color: #4a4a4a; line-height: 1.7; margin-bottom: 1.5em;">
-                    This framework enhances multimodal systems by improving visual sensitivity, strengthening cross-modal alignment, and boosting instruction-following capabilities. At its core are two key innovations: a false negative filtering mechanism using a similarity threshold (α = cos(e_q,e_c⁺) + β) to eliminate misleading samples, and an automatic hard negative sampling strategy that selects top-k similar but non-matching examples to increase training difficulty. The approach implements a three-stage process where false negatives are first filtered when similarity exceeds α, followed by selection of the most challenging negatives per batch, culminating in application of a modified contrastive loss focused exclusively on these carefully curated difficult cases.
+                    This framework enhances multimodal systems by improving visual sensitivity, strengthening cross-modal alignment, and boosting instruction-following capabilities. At its core are two key innovations: a false negative filtering mechanism using a similarity threshold <code style="background-color: #f3f4f7; padding: 0.2em 0.4em; border-radius: 3px;">(α = cos(e_q,e_c⁺) + β)</code> to eliminate misleading samples, and an automatic hard negative sampling strategy that selects top-k similar but non-matching examples to increase training difficulty. The approach implements a three-stage process where false negatives are first filtered when similarity exceeds α, followed by selection of the most challenging negatives per batch, culminating in application of a modified contrastive loss focused exclusively on these carefully curated difficult cases.
                   </p>
                   <div style="background-color: #e8f4fd; padding: 1em; border-radius: 4px; margin-top: 1.5em;">
                     <p style="font-weight: 600; color: #2c3e50; margin-bottom: 0;"><strong>Key Benefit:</strong></p>
@@ -455,7 +455,7 @@
         <div class="hero-body has-text-centered">
           <h1 class="title is-1 mmmu">
           
-            <span class="mmmu">Main Results</span>
+            <span class="mmmu">Evaluating UniME in downstream benchmarks</span>
           </h1>
         </div>
       </section>
@@ -992,7 +992,7 @@
   
                   <div class="box" style="background-color: #f8f9fa; padding: 1.75em; margin-top: 2em; border-left: 5px solid #3273dc; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
                     <p style="color: #4a4a4a; line-height: 1.6; margin-bottom: 0;">
-                      To evaluate the semantic expressiveness of UniME embeddings, we visualize the top-k token prediction probabilities using the prompt "&lt;Image&gt; Summary above image in one word:". Initially, predictions are abstract (e.g., "Pastoral", "Peaceful"). After textual discriminative knowledge distillation, they become more concrete (e.g., "cow", "waterfront"), though still dominated by "Farm". Following hard negative enhanced instruction tuning, the distribution spreads more evenly across semantically relevant tokens, indicating improved discriminative power and alignment with image content.
+                      To evaluate the semantic expressiveness of UniME embeddings, we visualize the top-k token prediction probabilities using the prompt <code style="padding: 0.2em 0.4em; border-radius: 3px; font-style: normal;">"&lt;Image&gt; Summary above image in one word: \n"</code>. Initially, predictions are abstract (e.g., "Pastoral", "Peaceful"). After textual discriminative knowledge distillation, they become more concrete (e.g., "cow", "waterfront"), though still dominated by "Farm". Following hard negative enhanced instruction tuning, the distribution spreads more evenly across semantically relevant tokens, indicating improved discriminative power and alignment with image content.
                     </p>
                   </div>
                 </div>
